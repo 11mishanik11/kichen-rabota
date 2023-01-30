@@ -1,0 +1,760 @@
+/* STYLE ZIRO */
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+input,textarea,button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+ul,li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+html,
+body {
+    height: 100%;
+
+    font-family: 'Tilda Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #eaeaea;
+    background-color: #0D0D0D;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Help classes */
+.gradient-text {
+    background: linear-gradient(to left, #C2A97D 50%, #A67C46);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.text-mid {
+    font-weight: 500;
+}
+
+
+/* Page */
+.page {
+    flex: 1 1 auto;
+    padding-top: 100px;
+}
+
+.page__section {
+    padding: 50px 0;
+}
+
+/* Btn */
+.btn {
+    display: inline-block;
+    padding: 6px;
+
+    font-size: 12px;
+    font-weight: 800;
+    color: #eaeaea;
+    text-transform: uppercase;
+
+    background: linear-gradient(to left, #C2A97D 50%, #A67C46);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn--border {
+    position: relative;
+    text-align: center;
+    background: #0d0d0d;
+}
+
+.btn--border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -2;
+
+    background: linear-gradient(to left, #C2A97D 50%, #A67C46);
+    border-radius: 34px;
+}
+
+
+/* Header */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    background-color: #191919;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 49.31%, rgba(255, 255, 255, 0) 100%);
+}
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 25px;
+}
+
+.header__group {
+    display: flex;
+    align-items: center;
+}
+
+.header__btn {
+    padding: 3px 8px;
+
+    text-transform: none;
+    border-radius: 5px;
+    background-color: #191919;
+}
+.header__btn::before {
+    border-radius: 5px;
+}
+
+
+/* Burger */
+.burger {
+    position: relative;
+
+    width: 24px;
+    height: 20px;
+    margin-left: 25px;
+
+    font-size: 0;
+    color: transparent;
+}
+.burger::after,
+.burger::before {
+    content: "";
+}
+.burger span,
+.burger::after,
+.burger::before {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+}
+
+.burger span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burger::before {
+    top: 0;
+}
+.burger::after {
+    bottom: 0;
+}
+
+
+/* Список городов */
+.towns-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.towns-list__item {
+    font-weight: 500;
+    font-size: 16px;
+}
+.towns-list__item::after {
+    content: "/";
+    margin: 0 5px;
+}
+.towns-list__item:last-child:after {
+    display: none;
+}
+
+
+/* Intro */
+.intro {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(334.89deg, #1D1D1D 13.08%, #1D1D1D 102.58%);
+    box-shadow: 0px 1px 31px rgba(255, 255, 255, 0.15);
+}
+
+.circ {
+    display: block;
+    position: absolute;
+    bottom: 65px;
+    right: -65px;
+    z-index: 9;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: rgba(234, 234, 234, .1);
+    border-radius: 50%;
+
+}
+.circ-16 {
+    top: 16px;
+    right: 16px;
+
+    width: 16px;
+    height: 16px;
+}
+.circ-22 {
+    top: -6px;
+    right: -6px;
+    left: auto;
+
+    width: 22px;
+    height: 22px;
+}
+.circ-43 {
+    left: -25px;
+    bottom: 30px;
+    right: auto;
+
+    width: 46px;
+    height: 46px;
+}
+
+.intro__container {
+    max-width: 380px;
+}
+.intro__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 50px;
+}
+
+.intro__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.intro__video-wrapper {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 50px;
+
+    border: 1px solid rgba(234, 234, 234, .2);
+    border-radius: 21px;
+}
+
+.intro__video {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.intro__video video {
+    border-radius: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro__sub-title {
+    position: relative;
+    z-index: 1;
+
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    color: #eaeaea;
+}
+.intro__sub-title::before,
+.intro__sub-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    
+    display: block;
+    height: 1px;
+
+    background-color: currentColor;
+    transform: translateX(-50%);
+}
+.intro__sub-title::before {
+    top: -12px;
+    width: 113px;
+}
+.intro__sub-title::after {
+    bottom: -12px;
+    width: 68px;
+}
+
+
+/* progress */
+
+.progress {
+    position: relative;
+    z-index: 0;
+    padding: 50px 0 15px;
+
+    background-image: url("../img/progress/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.progress__decor {
+    position: absolute;
+    right: -60px;
+    top: -30px;
+    z-index: -1;
+    opacity: .1;
+}
+
+.progress__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress__item {
+    display: flex;
+    margin-bottom: 15px;
+
+    background: rgba(13, 13, 13, 0.5);
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.1);
+}
+
+.progress__item:last-child {
+    margin-bottom: 0;
+}
+
+.progress__img {
+    position: relative;
+    z-index: 1;
+
+    max-width: 40%;
+    height: auto;
+    margin-right: -8px;
+
+    border-radius: 10px;
+}
+
+.progress__info {
+    flex: 1;
+    padding: 7px 20px 7px 30px;
+
+    border: 1px solid #C2A97D;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.progress__num {
+    display: inline-block;
+    margin-bottom: 6px;
+
+    padding: 2px 8px;
+    font-size: 11px;
+
+    border: 1px solid #C2A97D;
+    border-radius: 10px;
+}
+
+.progress__text {
+    font-weight: 300;
+    font-size: 14px;
+    color: #eaeaea;
+}
+
+
+/* Work Photo */
+
+.work-photo__slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.work-photo__info {
+    padding: 0 20px;
+    border: 1px solid #EAEAEA;
+    border-radius: 25px;
+}
+
+.work-photo__list {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 13px 20px;
+    margin: -1px;
+
+    border-radius: 25px;
+    border: 1px solid #C2A97D;
+}
+
+.work-photo__item {
+    flex: 0 1 50%;
+
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 300;
+    color: #C2A97D;
+    
+    list-style: disc;
+    /* list-style-position: inside; */
+}
+.work-photo__item span {
+    color: #FFFFFF;
+}
+/* МишаВечер 30.01.2023 Низ */
+
+
+/* СлавикВечер 30.01.2023 Верх */
+
+/* pros */
+.pros__header {
+    padding: 12px 31px;
+    margin-bottom: 20px;
+
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 120%;
+
+    color: #EAEAEA;
+
+    border: 1px solid #C2A97D;
+    border-radius: 25px;
+}
+
+.pros__item{
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+
+    background: rgba(13, 13, 13, 0.5);
+    border: 0.5px solid #EAEAEA;
+    border-radius: 10px;
+}
+
+.pros__item:last-child {
+    margin-bottom: 0;
+}
+
+.pros__item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.pros__headline {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.pros__content{
+    width: 60%;
+    padding: 15px;
+}
+.pros__text {
+    font-weight: 300;
+}
+.pros__img{
+    display: block;
+    width: 40%;
+
+    border-radius: 10px;
+}
+
+
+/* reviews */
+.reviews__text {
+    text-align: center;
+    position: relative;
+
+    font-weight: 300;
+    font-size: 14px;
+
+    line-height: 1.3;
+    color: #EAEAEA;
+    opacity: .75;
+}
+
+.reviews__text::before {
+    display: block;
+    content: "";
+    width: 230px;
+    height: 201px;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    transform: translate(-50%,-30%);
+
+    background-color: #EAEAEA;
+
+    opacity: .03;
+}
+
+.reviews__text::after {
+    display: block;
+    content: "";
+
+    margin: 15px auto;
+
+    width: 62px;
+    border: 1px solid;
+    
+}
+.reviews__box {
+    text-align: center;
+}
+.reviews__client{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    
+    
+}
+.reviews__img {
+    opacity: .4;
+
+    margin-right: 10px;
+}
+
+.reviews__date {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 124%;
+
+    color: rgba(234, 234, 234, .65);
+}
+
+
+/* vid-reviews */
+.vid-reviews__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.vid-reviews__item {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+/* Adress */
+.address {
+    margin-bottom: 50px;
+}
+.address__item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.address__img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    max-width: 40%;
+    height: auto;
+    margin-right: -20px;
+
+    border-radius: 25px;
+}
+
+.address__content {
+    flex: 1;
+    padding: 11px 20px 11px 40px;
+
+    border: 1px solid rgba(234, 234, 234, .3);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.address__town {
+    font-weight: 800;
+}
+.address__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+
+    color: #EAEAEA;
+
+    margin-bottom: 5px;
+}
+
+.address__text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.15;
+
+    color: #EAEAEA;
+}
+
+/* СлавикВечер 30.01.2023 Низ */
+
+/*  */
+.push-contact {
+    margin-bottom: 50px;
+}
+
+.push-contact__inner {
+    padding: 24px;
+
+    background-color: #fff;
+    border-radius: 35px;
+}
+
+.push-contact__header {
+    margin-bottom: 20px;
+
+    text-align: center;
+    color: #101010;
+}
+
+.push-contact__title {
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.push-contact__sub-title {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.push-contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.push-contact__input {
+    width: 100%;
+    padding: 7px 24px;
+    margin-bottom: 12px;
+
+    color: #C2A97D;
+
+    border: 1px solid rgba(16, 16, 16, .3);
+    border-radius: 20px;
+
+    transition: border linear .2s;
+}
+
+.push-contact__input:focus {
+    outline:none
+}
+
+.push-contact__input:focus {
+    border-color: #C2A97D;
+}
+
+.push-contact__inner::placeholder {
+    color: rgba(16, 16, 16, .6);
+}
+
+.push-contact__select {
+    appearance: none;
+
+    position: relative;
+    z-index: 1;
+}
+
+.push-contact__select::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 24px;
+    z-index: 1;
+
+    display: block;
+    width: 8px;
+    height: 8px;
+
+    border-right: 1px solid rgba(16, 16, 16, .6);
+    border-bottom: 1px solid rgba(16, 16, 16, .6);
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.push-contact__input:last-child {
+    margin-bottom: 0;
+}
