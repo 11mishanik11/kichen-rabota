@@ -28,10 +28,15 @@
                             </button>
                         </div>
 
-                        <button class="burger">
+                        <button class="burger" id="burger">
                             <span>burger</span>
                         </button>
                     </div>
+                    <nav class="menu" id="menu">
+                        <a class="menu__link  active" href="#">Главная</a>
+                        <a class="menu__link" href="#">Пункт меню</a>
+                        <a class="menu__link" href="#">Пункт меню</a>
+                    </nav>
                 </div>
 
             </div>
@@ -132,18 +137,30 @@
                 </div><!--/.progress__container-->
             </section>
 
-            <section class="page__section  work-photo">
+            <section class="work-photo">
+
+                <h2 class="work-photo__title  section-title">
+                    <span class="gradient-text">Наш цех</span>
+                </h2>
+                
+                <div class="work-photo__sliders" id="work-photo-slider">
+                    <div class="work-photo__slider">
+                        <img src="https://via.placeholder.com/290x141" alt="">
+                    </div>
+
+                    <div class="work-photo__slider">
+                        <img src="https://via.placeholder.com/290x141" alt="">
+                    </div>
+
+                    <div class="work-photo__slider">
+                        <img src="https://via.placeholder.com/290x141" alt="">
+                    </div>
+                </div>
+
+
+
                 <div class="container">
-
-                    <h2 class="work-photo__title  section-title">
-                        <span class="gradient-text">Наш цех</span>
-                    </h2>
-                    
                     <div class="work-photo__inner">
-                        <div class="work-photo__slider">
-                            <img src="https://via.placeholder.com/290x141" alt="">
-                        </div>
-
                         <div class="work-photo__info">
                             <ul class="work-photo__list">
                                 <li class="work-photo__item">
@@ -181,65 +198,36 @@
 
                     <div class="portfolio__inner">
                         <div class="portfolio__item">
-                            <div class="portfolio__top">
-                                <img class="portfolio__img" src="assets/img/portfolio/1.jpg" alt="скандинавский">
-                                <img class="portfolio__img-human" src="assets/img/portfolio/1-user.png" alt="human">
-                                <span class="portfolio__price">
-                                    <img class="portfolio__price-icon" src="assets/img/portfolio/price-icon.svg" alt="">
-                                    15 000тг
-                                </span>
-                            </div>
-                            <div class="portfolio__info">
-                                <div class="portfolio__info-left">
-                                    <div class="portfolio__color">
-                                        <span class="text-mid">Бронзовый</span> спарк
+                            
+                            <a href="#">
+                                <div class="portfolio__top">
+                                    <img class="portfolio__img" src="assets/img/portfolio/1.jpg" alt="скандинавский">
+                                    <img class="portfolio__img-human" src="assets/img/portfolio/1-user.png" alt="human">
+                                    <span class="portfolio__price">
+                                        <img class="portfolio__price-icon" src="assets/img/portfolio/price-icon.svg" alt="">
+                                        15 000тг
+                                    </span>
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__info-left">
+                                        <div class="portfolio__color">
+                                            <span class="text-mid">Бронзовый</span> спарк
+                                        </div>
+                                        <div class="portfolio__style">
+                                            <span class="text-mid">скандинавский:</span><br>3,6 x 3,5 м
+                                        </div>
+                                        <div class="portfolio__client">
+                                            <span class="gradient-text">
+                                                <span class="text-mid">заказчик:</span> Марина
+                                            </span>
+                                        </div>
                                     </div>
-
-                                    <div class="portfolio__style">
-                                        <span class="text-mid">скандинавский:</span><br>3,6 x 3,5 м
-                                    </div>
-
-                                    <div class="portfolio__client">
-                                        <span class="gradient-text">
-                                            <span class="text-mid">заказчик:</span> Марина
-                                        </span>
+                                    <div class="portfolio__info-right">
+                                        В сочетании с открытыми полками из материала стлолешницы мы получили легкую кухню, которая отлично вписалась в дом
                                     </div>
                                 </div>
-                                <div class="portfolio__info-right">
-                                    В сочетании с открытыми полками из материала стлолешницы мы получили легкую кухню, которая отлично вписалась в дом
-                                </div>
-                            </div>
-                        </div>
+                            </a>
 
-                        <div class="portfolio__item">
-                            <div class="portfolio__top">
-                                <img class="portfolio__img" src="assets/img/portfolio/2.jpg" alt="скандинавский">
-                                <img class="portfolio__img-human" src="assets/img/portfolio/2-user.png" alt="human">
-                                <span class="portfolio__price">
-                                    <img class="portfolio__price-icon" src="assets/img/portfolio/price-icon.svg" alt="">
-                                    15 000тг
-                                </span>
-                            </div>
-                            <div class="portfolio__info">
-                                <div class="portfolio__info-left">
-                                    <div class="portfolio__color">
-                                        <span class="text-mid">Бронзовый</span> спарк
-                                    </div>
-
-                                    <div class="portfolio__style">
-                                        <span class="text-mid">скандинавский:</span><br>3,6 x 3,5 м
-                                    </div>
-
-                                    <div class="portfolio__client">
-                                        <span class="gradient-text">
-                                            <span class="text-mid">заказчик:</span> Марина
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="portfolio__info-right">
-                                    В сочетании с открытыми полками из материала стлолешницы мы получили легкую кухню, которая отлично вписалась в дом
-                                </div>
-                            </div>
                         </div>
                     </div><!--/.portfolio__inner-->
 
@@ -266,6 +254,7 @@
                         </div>
 
                         <div class="catalog__cards">
+                            
                             <div class="catalog__card">
                                 <div class="catalog__image">
                                     <img class="catalog__img" src="assets/img/catalog/antro.jpg" alt="antro">
@@ -279,30 +268,11 @@
                                         </div>
                                     </div>
                                     <div class="catalog__group">
-                                        <button class="catalog__card-btn  btn" type="button">Рассчитать</button>
+                                        <a class="catalog__card-btn  btn" href="#">Рассчитать</a>
                                     </div>
-
                                 </div>
                             </div>
 
-                            <div class="catalog__card">
-                                <div class="catalog__image">
-                                    <img class="catalog__img" src="assets/img/catalog/antro.jpg" alt="antro">
-                                </div>
-                                <div class="catalog__info">
-                                    <div class="catalog__group">
-                                        <div class="catalog__name"><span class="text-mid">Кухня</span> Antro</div>
-                                        <div class="catalog__style"><span class="text-mid">Неоклассика</span> | МДФ</div>
-                                        <div class="catalog__price">
-                                            <span class="catalog__sub-price">п/м от</span><span class="gradient-text">400 000 тг</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__group">
-                                        <button class="catalog__card-btn  btn" type="button">Рассчитать</button>
-                                    </div>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -382,9 +352,8 @@
                                         </div>
                                     </div>
                                     <div class="catalog__group">
-                                        <button class="catalog__card-btn  btn" type="button">Рассчитать</button>
+                                        <a class="catalog__card-btn  btn" type="button">Рассчитать</a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -486,9 +455,9 @@
                                     п/м от <span class="furniture__price">15 000 тг</span>
                                 </div>
                                 <div class="gradient-block  furniture__gradient-block">
-                                    <button class="gradient-block-item  btn  furniture__btn">
+                                    <a class="gradient-block-item  btn  furniture__btn">
                                         <span class="gradient-text">Подробнее</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -507,51 +476,9 @@
                                     п/м от <span class="furniture__price">15 000 тг</span>
                                 </div>
                                 <div class="gradient-block  furniture__gradient-block">
-                                    <button class="gradient-block-item  btn  furniture__btn">
+                                    <a class="gradient-block-item  btn  furniture__btn">
                                         <span class="gradient-text">Подробнее</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="furniture__column">
-                            <div class="furniture__item">
-                                <div class="furniture__image">
-                                    <img class="furniture__img" src="https://via.placeholder.com/155x179/252525" alt="">
-                                    <div class="furniture__image-text">
-                                        01
-                                        <span>Шкафы</span>
-                                    </div>
-                                </div>
-
-                                <div class="furniture__info">
-                                    п/м от <span class="furniture__price">15 000 тг</span>
-                                </div>
-                                <div class="gradient-block  furniture__gradient-block">
-                                    <button class="gradient-block-item  btn  furniture__btn">
-                                        <span class="gradient-text">Подробнее</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="furniture__column">
-                            <div class="furniture__item">
-                                <div class="furniture__image">
-                                    <img class="furniture__img" src="https://via.placeholder.com/155x179/252525" alt="">
-                                    <div class="furniture__image-text">
-                                        01
-                                        <span>Шкафы</span>
-                                    </div>
-                                </div>
-
-                                <div class="furniture__info">
-                                    п/м от <span class="furniture__price">15 000 тг</span>
-                                </div>
-                                <div class="gradient-block  furniture__gradient-block">
-                                    <button class="gradient-block-item  btn  furniture__btn">
-                                        <span class="gradient-text">Подробнее</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -565,9 +492,11 @@
                     <h2 class="promotion__title  section-title">
                         <span class="gradient-text">Акции</span>
                     </h2>
+                </div>
 
-                    <div class="promotion__inner">
-                        <div class="promotion__item">
+                <div class="promotion__slides" id="promotion-slides">
+                    <div class="promotion__item">
+                        <a href="">
                             <div class="promotion__image">
                                 <img class="promotion__img" src="https://via.placeholder.com/290x141/252525" alt="">
                             </div>
@@ -575,7 +504,31 @@
                                 <div class="promotion__name">Без % рассрочка на 12 месяцев</div>
                                 <div class="promotion__text">Мебель от “ЛЯ-КУХНИ” без первоначального взноса и переплаты</div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+
+                    <div class="promotion__item">
+                        <a href="">
+                            <div class="promotion__image">
+                                <img class="promotion__img" src="https://via.placeholder.com/290x141/252525" alt="">
+                            </div>
+                            <div class="promotion__info">
+                                <div class="promotion__name">Без % рассрочка на 12 месяцев</div>
+                                <div class="promotion__text">Мебель от “ЛЯ-КУХНИ” без первоначального взноса и переплаты</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="promotion__item">
+                        <a href="">
+                            <div class="promotion__image">
+                                <img class="promotion__img" src="https://via.placeholder.com/290x141/252525" alt="">
+                            </div>
+                            <div class="promotion__info">
+                                <div class="promotion__name">Без % рассрочка на 12 месяцев</div>
+                                <div class="promotion__text">Мебель от “ЛЯ-КУХНИ” без первоначального взноса и переплаты</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -629,28 +582,22 @@
 
             <section class="page__section  reviews">
                 <div class="reviews__conteiner container">
-                    <div class="reviews__inner">
-                        <h2 class="progress__title  section-title">
-                            <span class="gradient-text">Отзывы</span>
-                        </h2>
 
+                    <h2 class="progress__title  section-title">
+                        <span class="gradient-text">Отзывы</span>
+                    </h2>
+                    <div class="reviews__inner">
                         <div class="reviews__text">
-                            <p>
-                                Хочу выразить благодарность и признательность менеджеру консультанту Найденовой Юлии. Консультация на высшем уровне, с проработкой деталей, до мельчайших подробностей. Дала несколько дельных советов по организации кухни.
-                            </p>
+                            Хочу выразить благодарность и признательность менеджеру консультанту Найденовой Юлии. Консультация на высшем уровне, с проработкой деталей, до мельчайших подробностей. Дала несколько дельных советов по организации кухни.
                         </div>
                         <div class="reviews__box">
                             <div class="reviews__client">
                                 <div class="reviews__img">
-                                    <img src="assets/img/reviews/Ellipse 52.png" alt="" class="reviews__photo">
+                                    <img class="reviews__photo" src="assets/img/reviews/Ellipse 52.png" alt="">
                                 </div>
                                 <div class="reviews__content">
-                                    <h4>
-                                        Валерия
-                                    </4h>
-                                    <p class="reviews__date">
-                                        15.12.2022
-                                    </p>
+                                    <h4 class="reviews__name  gradient-text">Валерия</h4>
+                                    <span class="reviews__date">24.12.2022</span>
                                 </div>
                             </div>
                         </div>
@@ -659,7 +606,7 @@
                 </div>
             </section><!--/.reviews-->
 
-            <section class="page__section  vid-reviews">
+            <section class="vid-reviews">
                 <div class="vid-reviews__conteiner container">
 
                     <h2 class="progress__title  section-title">
@@ -727,7 +674,7 @@
                 </div>
             </section> <!--/.adress-->
 
-            <div class="push-contact">
+            <div class="page__section  push-contact">
                 <div class="container">
 
                     <div class="push-contact__inner">
@@ -772,13 +719,17 @@
                     <div class="footer__contact">
                         <ul class="socials">
                             <li class="socials__item">
-                                <a class="socials__link" href="#">1</a>
+                                <a class="socials__link" href="#">
+                                    <img src="assets/img/socials/inst.svg" alt="">
+                                </a>
                             </li>
                             <li class="socials__item">
-                                <a class="socials__link" href="#">2</a>
+                                <a class="socials__link" href="#">
+                                    <img src="assets/img/socials/tg.svg" alt="">
+                                </a>
                             </li>
                             <li class="socials__item">
-                                <a class="socials__link" href="#">3</a>
+                                <img src="assets/img/socials/youtube.svg" alt="">
                             </li>
                         </ul>
 
@@ -905,6 +856,10 @@
             </div>
         </footer>
 
+
+        <script src="assets/js/libs/jquery-3.6.3.min.js"></script>
+        <script src="assets/js/libs/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </div>
 </body>
 </html>
