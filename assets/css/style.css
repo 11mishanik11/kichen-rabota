@@ -58,6 +58,25 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/* 
+    градиент бордер
+    Задать оболочку с классом .gradient-block для нужного элемента. 
+    Тощина настраивается паддингом 
+*/
+.gradient-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1px;
+    background: linear-gradient(to left, #C2A97D 50%, #A67C46);
+}
+.gradient-block-item {
+    width: 100%;
+    height: 100%;
+}
+
+/* Заголовок блоков */
 .section-title {
     margin-bottom: 30px;
     text-align: center;
@@ -81,38 +100,17 @@ body {
     padding: 50px 0;
 }
 
-/* Btn */
+
+/* btn */
 .btn {
     display: inline-block;
-    padding: 6px;
+    padding: 10px;
 
-    font-size: 12px;
-    font-weight: 800;
-    color: #eaeaea;
     text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
 
     background: linear-gradient(to left, #C2A97D 50%, #A67C46);
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.btn--border {
-    position: relative;
-    text-align: center;
-    background: #0d0d0d;
-}
-
-.btn--border::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
-    z-index: -2;
-
-    background: linear-gradient(to left, #C2A97D 50%, #A67C46);
-    border-radius: 34px;
 }
 
 
@@ -151,15 +149,15 @@ body {
     align-items: center;
 }
 
-.header__btn {
-    padding: 3px 8px;
-
-    text-transform: none;
+.header__gradient-block {
     border-radius: 5px;
-    background-color: #191919;
 }
-.header__btn::before {
+.header__btn {
+    padding: 4px 6px;
     border-radius: 5px;
+
+    background: linear-gradient(transparent, transparent);
+    background-color: #191919;
 }
 
 
@@ -720,41 +718,28 @@ body {
     transition: border linear .2s;
 }
 
-.push-contact__input:focus {
-    outline:none
-}
-
-.push-contact__input:focus {
-    border-color: #C2A97D;
-}
-
 .push-contact__inner::placeholder {
     color: rgba(16, 16, 16, .6);
 }
 
-.push-contact__select {
+.push-contact__input:focus {
+    outline: none;
+    border-color: #C2A97D;
+}
+
+.push-contact__input--arrow {
     appearance: none;
-
-    position: relative;
-    z-index: 1;
+    background-image: url('../img/arrow-select.svg');
+    background-repeat: no-repeat;
+    background-position: center right 15px;
 }
 
-.push-contact__select::after {
-    content: "";
-    position: absolute;
-    top: 40%;
-    right: 24px;
-    z-index: 1;
-
-    display: block;
-    width: 8px;
-    height: 8px;
-
-    border-right: 1px solid rgba(16, 16, 16, .6);
-    border-bottom: 1px solid rgba(16, 16, 16, .6);
-    transform: rotate(45deg) translateY(-50%);
+.push-contact__gradient-block {
+    border-radius: 20px;
 }
 
-.push-contact__input:last-child {
-    margin-bottom: 0;
+.push-contact__btn {
+    background: linear-gradient(transparent, transparent);
+    border-radius: 20px;
+    background-color: #fff;
 }
